@@ -5,7 +5,7 @@
 		"github-actions",
 		"ansible-galaxy",
 		"devcontainer",
-		"poetry"
+		"pep621"
 	],
 	"automerge": false,
 	"prCreation": "immediate",
