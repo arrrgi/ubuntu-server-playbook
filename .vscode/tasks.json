@@ -1,0 +1,63 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"presentation": {
+		"panel": "dedicated",
+		"showReuseMessage": true
+	},
+	"inputs": [
+		{
+			"id": "bindAddress",
+			"type": "promptString",
+			"description": "Enter the bind address for the autoinstaller web service",
+			"default": "127.0.0.1"
+		},
+		{
+			"id": "bindPort",
+			"type": "promptString",
+			"description": "Enter the bind port for the autoinstaller web service",
+			"default": "8080"
+		}
+	],
+	"tasks": [
+		{
+			"label": "Install Python",
+			"type": "shell",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"command": "uv",
+			"args": ["python", "install", "--managed-python"]
+		},
+		{
+			"label": "Install Python Dependencies",
+			"type": "shell",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"command": "uv",
+			"args": ["sync", "--all-groups"]
+		},
+		{
+			"label": "Init Project Workspace",
+			"dependsOn": ["Install Python", "Install Python Dependencies"],
+			"dependsOrder": "sequence"
+		},
+		{
+			"label": "Launch cloud-config http server",
+			"type": "process",
+			"command": "${config:python.defaultInterpreterPath}",
+			"args": [
+				"-m",
+				"http.server",
+				"--bind",
+				"${input:bindAddress}",
+				"${input:bindPort}",
+				"--directory",
+				"${workspaceFolder}/bootconfig"
+			],
+			"problemMatcher": []
+		}
+	]
+}

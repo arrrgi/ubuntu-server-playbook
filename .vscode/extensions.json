@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		"axelrindle.task-explorer",
+		"oderwat.indent-rainbow",
+		"ms-python.python",
+		"ms-vscode-remote.vscode-remote-extensionpack",
+		"redhat.ansible",
+		"redhat.vscode-yaml"
+	]
+}
