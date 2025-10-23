@@ -1,6 +1,6 @@
 [project]
 name = "ubuntu-server-playbook"
-version = "0.1.0"
+version = "0.2.0"
 description = "An Ansible Playbook for deploying a personal Ubuntu server"
 readme = "README.md"
 authors = [
