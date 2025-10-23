@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  release-please:
+  create-release:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -14,7 +14,8 @@ jobs:
       issues: write
 
     steps:
-      - uses: googleapis/release-please-action@v4
+      - name: Run release-please action
+        uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: .release-please-config.json

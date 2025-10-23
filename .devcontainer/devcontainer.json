@@ -28,23 +28,25 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "uv python install --managed-python; uv sync --all-groups",
+	"postCreateCommand": "uv python install --managed-python && uv sync --all-groups && pre-commit install",
 
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
 			"settings": {
-				"ansible.python.interpreterPath": "${workspaceFolder}/.venv/bin/python"
+				"ansible.python.interpreterPath": "${workspaceFolder}/.venv/bin/python",
+				"dev.containers.copyGitConfig": true
 			},
 			"extensions": [
-				"ms-python.python",
-				"redhat.ansible",
-				"editorconfig.editorconfig",
-				"tamasfe.even-better-toml",
+				"axelrindle.task-explorer",
 				"bierner.github-markdown-preview",
-				"oderwat.indent-rainbow",
+				"editorconfig.editorconfig",
 				"esbenp.prettier-vscode",
+				"ms-python.python",
+				"oderwat.indent-rainbow",
+				"redhat.ansible",
 				"redhat.vscode-yaml"
+				"tamasfe.even-better-toml",
 			]
 		}
 	}
