@@ -14,7 +14,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "ansible-creator>=25.10.0",
+    "ansible-creator>=25.11.0",
     "commitizen>=4.9.1",
     "mkdocs-material>=9.6.23",
     "pre-commit>=4.4.0",
