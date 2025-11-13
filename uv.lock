@@ -1031,7 +1031,7 @@ requires-dist = [{ name = "ansible", specifier = ">=12.2.0" }]
 [package.metadata.requires-dev]
 dev = [
     { name = "ansible-creator", specifier = ">=25.10.0" },
-    { name = "commitizen", specifier = ">=4.9.1" },
+    { name = "commitizen", specifier = ">=4.10.0" },
     { name = "mkdocs-material", specifier = ">=9.6.23" },
     { name = "pre-commit", specifier = ">=4.4.0" },
 ]
