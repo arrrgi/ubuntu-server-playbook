@@ -1035,7 +1035,7 @@ dev = [
     { name = "mkdocs-material", specifier = ">=9.6.23" },
     { name = "pre-commit", specifier = ">=4.4.0" },
 ]
-lint = [{ name = "ansible-lint", specifier = ">=25.9.2" }]
+lint = [{ name = "ansible-lint", specifier = ">=25.11.0" }]
 
 [[package]]
 name = "urllib3"
