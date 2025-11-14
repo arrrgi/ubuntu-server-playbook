@@ -1032,7 +1032,7 @@ requires-dist = [{ name = "ansible", specifier = ">=12.2.0" }]
 dev = [
     { name = "ansible-creator", specifier = ">=25.10.0" },
     { name = "commitizen", specifier = ">=4.9.1" },
-    { name = "mkdocs-material", specifier = ">=9.6.23" },
+    { name = "mkdocs-material", specifier = ">=9.7.0" },
     { name = "pre-commit", specifier = ">=4.4.0" },
 ]
 lint = [{ name = "ansible-lint", specifier = ">=25.9.2" }]
